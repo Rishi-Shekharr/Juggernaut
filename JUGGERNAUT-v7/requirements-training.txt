@@ -1,0 +1,13 @@
+# Python 3.11; install a CUDA-enabled PyTorch build for NVIDIA training.
+torch==2.8.0
+torchvision==0.23.0
+numpy
+PyYAML
+tensorboard
+genesis-world==1.4.0
+rsl-rl-lib==2.2.4
+warp-lang==1.12.1
+
+# Static CAD reconstruction; not needed inside policy rollouts.
+trimesh
+scipy

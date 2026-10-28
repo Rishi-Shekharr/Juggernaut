@@ -1,0 +1,119 @@
+# V7 motor order: 8 policy legs, then 4 externally commanded micro servos.
+defaults:
+  kp: 3.0
+  kd: 0.06
+  torque_limit: 0.94
+  max_speed: 6.0
+  default_pos: 0.0
+  pd_trim: 0.0
+  action_scale: 0.3
+joints:
+- name: left_hip_pitch
+  action_scale: 0.9
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+  leg: left
+  role: hip_pitch
+  pd_trim: 0.0
+- name: left_knee_pitch
+  action_scale: 0.9
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+  leg: left
+  role: knee
+  pd_trim: 0.0
+- name: left_ankle_pitch
+  action_scale: 0.9
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+  leg: left
+  role: ankle_pitch
+  pd_trim: 0.0
+- name: Revolute-62
+  leg: left
+  role: ankle_roll
+  pd_trim: 0.0
+  action_scale: 0.15
+- name: right_hip_pitch
+  action_scale: 0.9
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+  leg: right
+  role: hip_pitch
+  pd_trim: 0.0
+- name: right_knee_pitch
+  action_scale: 0.9
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+  leg: right
+  role: knee
+  pd_trim: 0.0
+- name: right_ankle_pitch
+  action_scale: 0.9
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+  leg: right
+  role: ankle_pitch
+  pd_trim: 0.0
+- name: right_ankle_roll
+  leg: right
+  role: ankle_roll
+  pd_trim: 0.0
+  action_scale: 0.15
+- name: left_shoulder
+  leg: arm
+  role: shoulder
+  kp: 0.6
+  kd: 0.01808782111111
+  torque_limit: 0.1808782111111
+  max_speed: 10.0
+  pd_trim: 0.0
+  action_scale: 0.0
+  target_limit:
+  - -1.3089969389957
+  - 1.3089969389957
+- name: left_mandible
+  leg: arm
+  role: mandible
+  kp: 0.6
+  kd: 0.01808782111111
+  torque_limit: 0.1808782111111
+  max_speed: 10.0
+  pd_trim: 0.0
+  action_scale: 0.0
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+- name: right_shoulder
+  leg: arm
+  role: shoulder
+  kp: 0.6
+  kd: 0.01808782111111
+  torque_limit: 0.1808782111111
+  max_speed: 10.0
+  pd_trim: 0.0
+  action_scale: 0.0
+  target_limit:
+  - -1.3089969389957
+  - 1.3089969389957
+- name: right_mandible
+  leg: arm
+  role: mandible
+  kp: 0.6
+  kd: 0.01808782111111
+  torque_limit: 0.1808782111111
+  max_speed: 10.0
+  pd_trim: 0.0
+  action_scale: 0.0
+  target_limit:
+  - -1.3962634015955
+  - 1.3962634015955
+target_limit:
+- -1.3089969389957
+- 1.3089969389957

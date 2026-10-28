@@ -1,0 +1,206 @@
+<mujoco model="JUGGERNAUT-v7">
+    <compiler angle="radian" eulerseq="XYZ" inertiafromgeom="false" />
+    <option timestep="0.002" integrator="implicitfast" />
+    <asset>
+        <mesh name="chas-v7_1" file="meshes/chas-v7_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="hipforward-v5_1" file="meshes/hipforward-v5_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="thigh-v2_1" file="meshes/thigh-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="knee-v3_1" file="meshes/knee-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MR105ZZ-v1_1" file="meshes/MR105ZZ-v1_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MR105ZZ-v1_2" file="meshes/MR105ZZ-v1_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="linky-v2_1" file="meshes/linky-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="servo.MG995-v1_1" file="meshes/servo.MG995-v1_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="servo.MG995-v1_2" file="meshes/servo.MG995-v1_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="joiner2-v2_1" file="meshes/joiner2-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MR105ZZ-v1_3" file="meshes/MR105ZZ-v1_3.stl" scale="0.001 0.001 0.001" />
+        <mesh name="loong_rightfootpad-v3_1" file="meshes/loong_rightfootpad-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="hipforward-v4Mirror_1" file="meshes/hipforward-v4Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="thigh-v2Mirror_1" file="meshes/thigh-v2Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="knee-v3Mirror_1" file="meshes/knee-v3Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MR105ZZ-v1Mirror_1" file="meshes/MR105ZZ-v1Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MR105ZZ-v1Mirror_2" file="meshes/MR105ZZ-v1Mirror_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MR105ZZ-v1Mirror_3" file="meshes/MR105ZZ-v1Mirror_3.stl" scale="0.001 0.001 0.001" />
+        <mesh name="linky-v2Mirror_1" file="meshes/linky-v2Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="servo.MG995-v1Mirror_1" file="meshes/servo.MG995-v1Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="servo.MG995-v1Mirror_2" file="meshes/servo.MG995-v1Mirror_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="joiner2-v2Mirror_1" file="meshes/joiner2-v2Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="loong_rightfootpad-v2Mirror_1" file="meshes/loong_rightfootpad-v2Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MG90S-OnlyBody-v1_1" file="meshes/MG90S-OnlyBody-v1_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="chas_third_link-v1_1" file="meshes/chas_third_link-v1_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MG90S-OnlyBody-v1_2" file="meshes/MG90S-OnlyBody-v1_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="chas_second_link-v3_1" file="meshes/chas_second_link-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MG90S-OnlyBody-v1Mirror_1" file="meshes/MG90S-OnlyBody-v1Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="MG90S-OnlyBody-v1Mirror_2" file="meshes/MG90S-OnlyBody-v1Mirror_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="chas_third_link-v1Mirror_1" file="meshes/chas_third_link-v1Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="chas_second_link-v3Mirror_1" file="meshes/chas_second_link-v3Mirror_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="mg996_arm_round-v1_1" file="meshes/mg996_arm_round-v1_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="mg996_arm_round-v1_2" file="meshes/mg996_arm_round-v1_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Suporte-Servo-Motor-v1_1" file="meshes/Suporte-Servo-Motor-v1_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Suporte-Servo-Motor-v1_2" file="meshes/Suporte-Servo-Motor-v1_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Suporte-Servo-Motor-v1_3" file="meshes/Suporte-Servo-Motor-v1_3.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Suporte-Servo-Motor-v1_4" file="meshes/Suporte-Servo-Motor-v1_4.stl" scale="0.001 0.001 0.001" />
+    </asset>
+    <worldbody>
+        <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1" />
+        <body name="chas-v7_1" pos="-0.0038844905366649763 2.870826517110091e-06 0.0" euler="0.0 -0.0 3.141592653589793">
+            <geom name="chas-v7_1_geom" type="mesh" mesh="chas-v7_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+            <inertial mass="0.08870325912239671" pos="0.003982879052563551 -1.538924293891664e-05 0.01593043474290389" fullinertia="6.436481615959829e-05 0.00011133899748273069 0.0001508884877898115 -4.125601420922592e-08 3.424141882319104e-06 -1.2256245822244805e-08" />
+            <body name="MG90S-OnlyBody-v1_1" pos="-0.01233982152413047 -0.03460000000000011 0.0069519999999999894" euler="-1.5707963267948966 1.047705889746655e-31 3.141592653589787">
+                <geom name="MG90S-OnlyBody-v1_1_geom" type="mesh" mesh="MG90S-OnlyBody-v1_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                <inertial mass="0.05811426971318845" pos="0.0003542326469088963 -1.0816375677682833e-11 0.0013371473806810933" fullinertia="4.07626646811425e-06 6.156429090468772e-06 3.43510391148547e-06 4.550519001165726e-10 -2.8518334744843775e-07 6.544296165121183e-15" />
+                <body name="Suporte-Servo-Motor-v1_1" pos="0.005499999996274727 0.0 0.018100000000000005" euler="1.5707963267948977 -5.032887759295707e-15 -0.26179938779914924">
+                    <joint name="right_shoulder" type="hinge" axis="-1.293696623282337e-15 1.0 8.11718376587013e-16" pos="-3.1970574291565004e-07 0.0010001291734827653 8.566489564108116e-08" />
+                    <geom name="Suporte-Servo-Motor-v1_1_geom" type="mesh" mesh="Suporte-Servo-Motor-v1_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.005154683276150133" pos="-2.6313184764900626e-14 0.0011670379568979694 -7.248978433549884e-18" fullinertia="3.4240668750116044e-07 3.845530207564118e-07 5.292103828013782e-08 -7.300496747239282e-20 -1.0587911840678754e-22 -3.52795751350817e-22" />
+                    <body name="chas_third_link-v1_1" pos="0.10850000000372552 0.021199999940395484 -0.07900000117719214" euler="4.578720768301734e-16 -0.0 1.0118582427778524e-15">
+                        <geom name="chas_third_link-v1_1_geom" type="mesh" mesh="chas_third_link-v1_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.00215762735850741" pos="-0.10850000174023205 -0.01419999994039539 0.0571009463290114" fullinertia="4.306289105346318e-07 4.411855513126965e-07 1.954675477214558e-08 5.711660984204833e-21 3.3690221830966625e-15 -1.3379562486169405e-20" />
+                        <body name="MG90S-OnlyBody-v1_2" pos="-0.10940000166893016 -0.01419999994039527 0.021500001236796226" euler="7.959972075241933e-17 1.5707963267948963 0">
+                            <geom name="MG90S-OnlyBody-v1_2_geom" type="mesh" mesh="MG90S-OnlyBody-v1_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.05811426971318845" pos="0.00035423264690889495 -1.0816378344167648e-11 0.0013371473806810866" fullinertia="4.07626646811424e-06 6.1564290904686925e-06 3.4351039114854395e-06 4.550519000970225e-10 -2.851833474484498e-07 6.544308890259897e-15" />
+                            <body name="Suporte-Servo-Motor-v1_3" pos="0.005499999996274703 0.0 0.01810000000000003" euler="1.5707963267948966 -5.551115123125797e-17 0.9599310885968847">
+                                <joint name="right_mandible" type="hinge" axis="5.0776076038205886e-08 1.0000001561184857 7.251575115385656e-08" pos="2.3786500281573145e-07 0.001000166859902508 1.1449933510018382e-07" />
+                                <geom name="Suporte-Servo-Motor-v1_3_geom" type="mesh" mesh="Suporte-Servo-Motor-v1_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                <inertial mass="0.005154683276150133" pos="-2.6307759139546083e-14 0.0011670379568979768 -5.637851296924623e-18" fullinertia="3.4240668750115774e-07 3.8455302075641634e-07 5.292103828013551e-08 -7.302350447618128e-20 1.1911400820763599e-21 -2.779326858178173e-21" />
+                                <body name="chas_second_link-v3_1" pos="0.0120000000968572 -0.1175000009462233 0.08200000116229056" euler="3.141592653589791 4.996003610813213e-16 -1.5707963267948966">
+                                    <geom name="chas_second_link-v3_1_geom" type="mesh" mesh="chas_second_link-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                    <inertial mass="0.005486983819811198" pos="-0.1260000010699323 0.009835427816999691 0.04296739607582262" fullinertia="4.69309890926135e-06 4.635769530683619e-06 1.4877911343261077e-07 1.984307557236799e-15 1.804167323926685e-14 2.9981632368168375e-08" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body name="MG90S-OnlyBody-v1Mirror_1" pos="-0.012339821524130481 0.03460574165303433 0.0069519999999999894" euler="-1.5707963267948966 1.047705889746655e-31 -3.1415926535897865">
+                <geom name="MG90S-OnlyBody-v1Mirror_1_geom" type="mesh" mesh="MG90S-OnlyBody-v1Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                <inertial mass="0.05811426971318845" pos="0.0003542326469088963 -1.0816375677682833e-11 -0.0013371473806810933" fullinertia="4.0762664677884605e-06 6.156429091159544e-06 3.435103911850453e-06 4.5505208260897403e-10 2.8518334744844114e-07 -6.5442961651211834e-15" />
+                <body name="Suporte-Servo-Motor-v1_2" pos="0.00549999999627471 0.0 -0.018100000000000005" euler="-1.5707963267948957 -6.487972375121023e-15 -0.2617993877991493">
+                    <joint name="left_shoulder" type="hinge" axis="1.2814556757699028e-14 -1.0 2.843156859253223e-15" pos="-3.1970574290874084e-07 0.0010001291734827653 -8.566489563817415e-08" />
+                    <geom name="Suporte-Servo-Motor-v1_2_geom" type="mesh" mesh="Suporte-Servo-Motor-v1_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.005154683276150133" pos="-2.6312170605829266e-14 0.0011670379568979694 -6.18942895352583e-18" fullinertia="3.424066875011613e-07 3.845530207564118e-07 5.2921038280137506e-08 -7.267235848353447e-20 -5.161607022330893e-22 -1.0166596135565199e-22" />
+                    <body name="chas_third_link-v1Mirror_1" pos="0.1085000000037254 0.020199999940396493 0.07900000117719193" euler="3.5498740734945426e-30 -5.551115123125769e-17 1.1252488751292606e-14">
+                        <geom name="chas_third_link-v1Mirror_1_geom" type="mesh" mesh="chas_third_link-v1Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.00215762735850741" pos="-0.10850000174023243 -0.014199999940395213 -0.05710094632901122" fullinertia="4.3062891053466726e-07 4.41185551312606e-07 1.9546754771911316e-08 -2.8997709529281196e-20 -3.36898647536398e-15 -1.7410693556197325e-20" />
+                        <body name="MG90S-OnlyBody-v1Mirror_2" pos="-0.10940000166893 -0.014199999940395483 -0.02150000123679618" euler="4.3362075219870853e-16 -1.5707963267948966 0">
+                            <geom name="MG90S-OnlyBody-v1Mirror_2_geom" type="mesh" mesh="MG90S-OnlyBody-v1Mirror_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.05811426971318845" pos="0.0003542326469088972 -1.0816377844347834e-11 -0.0013371473806810916" fullinertia="4.0762664677883936e-06 6.156429091159512e-06 3.435103911850469e-06 4.5505208259510133e-10 2.851833474484279e-07 -6.5442962432757916e-15" />
+                            <body name="Suporte-Servo-Motor-v1_4" pos="0.005499999996274703 -1.7763568394002505e-17 -0.018099999999999998" euler="-1.570796326794898 4.440892098500623e-16 0.9599310885968819">
+                                <joint name="left_mandible" type="hinge" axis="-5.077607695413988e-08 -1.0000001561184846 7.251575118161213e-08" pos="2.37865003231008e-07 0.0010001668599023197 -1.144993349418361e-07" />
+                                <geom name="Suporte-Servo-Motor-v1_4_geom" type="mesh" mesh="Suporte-Servo-Motor-v1_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                <inertial mass="0.005154683276150133" pos="-2.6309060182153066e-14 0.0011670379568979729 -6.451002926288751e-18" fullinertia="3.4240668750115896e-07 3.8455302075641745e-07 5.292103828013401e-08 -6.971478202596917e-20 1.402898318889935e-21 1.0852609636695723e-21" />
+                                <body name="chas_second_link-v3Mirror_1" pos="0.012000000096857094 -0.1175000009462235 -0.08200000116229036" euler="-3.1415926535897905 -4.1633363423443316e-16 -1.5707963267948968">
+                                    <geom name="chas_second_link-v3Mirror_1_geom" type="mesh" mesh="chas_second_link-v3Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                    <inertial mass="0.005486983819811197" pos="-0.1260000010699327 0.009835427816999687 -0.04296739607582236" fullinertia="4.693098909261545e-06 4.635769530683568e-06 1.487791134326233e-07 1.9842693348750542e-15 -1.8041930313766343e-14 -2.998163236794052e-08" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body name="hipforward-v5_1" pos="0.028248525007058267 -0.01695043500014529 -0.01404799999999959" euler="-3.141592653589793 -1.5707963267948963 0">
+                <geom name="hipforward-v5_1_geom" type="mesh" mesh="hipforward-v5_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                <inertial mass="0.04482466812549609" pos="0.00012739455789877844 0.05458806032293902 -0.0010166853649476871" fullinertia="9.406441568052994e-06 1.0790296086376754e-05 1.618891471299666e-05 4.404290523961836e-07 -3.6243020908769065e-08 -1.0444554588689174e-07" />
+                <body name="thigh-v2_1" pos="-0.010249999999999908 0.080212 0.0007500000000000418" euler="-1.5707963267949048 -1.0471975511965972 5.30663371143749e-15">
+                    <joint name="right_hip_pitch" type="hinge" axis="2.5698047245374976e-15 -2.5529163729584733e-15 0.9999999999999776" pos="-1.346125971781629e-08 7.771861163383138e-09 0.001087694173339416" />
+                    <geom name="thigh-v2_1_geom" type="mesh" mesh="thigh-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.014168118140053755" pos="-3.2361266444347336e-14 -0.02519018999969006 0.005921435748258535" fullinertia="6.146674089921598e-06 6.593711624411835e-07 6.484553143857603e-06 -1.6263032587282567e-19 -1.5068014145443084e-18 5.512345593759919e-09" />
+                    <body name="knee-v3_1" pos="0.0011232396112094989 -0.07165850807568826 -0.04021200000000002" euler="-1.570796326794903 -3.891010611944872e-15 -2.617993877991494">
+                        <joint name="right_knee_pitch" type="hinge" axis="-2.9419526242092607e-15 0.9999999999999769 2.8743499068837895e-15" pos="-0.01024998951884385 -0.041299694173337315 -0.019999434546777387" />
+                        <geom name="knee-v3_1_geom" type="mesh" mesh="knee-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.11003845048041183" pos="0.0043514104256886 -0.015041755686175329 -0.02349796962996075" fullinertia="2.0904376045030698e-05 4.038780426535927e-05 4.7906966709838724e-05 2.4828511808558013e-06 5.026967156959607e-07 1.0673755463066608e-06" />
+                        <body name="servo.MG995-v1_1" pos="0.04812500000000013 0.02830000000000015 -0.031126760388790427" euler="-3.1415926535897842 1.0471975511965947 1.4067469533951953e-14">
+                            <joint name="right_ankle_pitch" type="hinge" axis="3.07349841614444e-15 -0.9999999999999766 7.477058755905484e-16" pos="-0.010250041614791485 0.044299694173336596 -4.3905203764055033e-07" />
+                            <geom name="servo.MG995-v1_1_geom" type="mesh" mesh="servo.MG995-v1_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.2522136580591196" pos="-0.0002307695233528456 0.019854374292340944 4.177218970843481e-15" fullinertia="4.0451358763480996e-05 4.382065315989779e-05 6.790198950674988e-05 5.09921267962806e-07 1.9240312367177867e-17 -2.288775925916829e-17" />
+                            <body name="joiner2-v2_1" pos="-0.04893262465032719 0.01724999999999962 0.02700000000000026" euler="3.1415926535897913 2.2327773722535035e-15 -1.5707963267948943">
+                                <geom name="joiner2-v2_1_geom" type="mesh" mesh="joiner2-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                <inertial mass="0.18125896719085852" pos="0.0018965791412666334 -0.05704299673209207 0.04501207986774911" fullinertia="8.291626881989613e-05 8.739006213338423e-05 8.910413766260663e-05 1.3188476208598033e-05 1.6810617402191756e-05 -2.3585943616907524e-05" />
+                                <body name="servo.MG995-v1_2" pos="-0.0030000000000001584 -0.039499999567865846 0.04699999999999989" euler="-3.549874073494592e-30 -8.480254731125897e-30 3.1415926535897922">
+                                    <geom name="servo.MG995-v1_2_geom" type="mesh" mesh="servo.MG995-v1_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                    <inertial mass="0.2522136580591196" pos="-0.00023076952335281657 0.01985437429234138 4.196451544067741e-15" fullinertia="4.045135876347381e-05 4.382065315990005e-05 6.790198950674294e-05 5.099212679630243e-07 1.932548263030357e-17 -2.262363847213779e-17" />
+                                    <body name="mg996_arm_round-v1_1" pos="-0.010250000000000132 0.043699999999999996 -1.7763568394002505e-17" euler="-1.5707963267948966 1.5707963267948954 0">
+                                        <joint name="right_ankle_roll" type="hinge" axis="3.360760820254432e-15 3.1931680176586704e-15 0.9999999999999911" pos="-4.3905203802949854e-07 3.0582666242004316e-07 0.0005995834676702868" />
+                                        <geom name="mg996_arm_round-v1_1_geom" type="mesh" mesh="mg996_arm_round-v1_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                        <inertial mass="0.006838616865849774" pos="-5.6964678780704e-14 -1.4832353762380457e-17 0.0009179644213399748" fullinertia="1.833288946348956e-07 1.8332889306586485e-07 3.4718926728398364e-07 -6.3594522883051346e-21 4.922086466065422e-19 1.5658025405276472e-21" />
+                                        <body name="loong_rightfootpad-v3_1" pos="-0.03999999999999984 0.012499999999999392 -0.056699999999999626" euler="-3.1415926535897927 3.907442506474755e-15 1.570796326794897">
+                                            <geom name="loong_rightfootpad-v3_1_geom" type="mesh" mesh="loong_rightfootpad-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                            <inertial mass="0.058604369572271324" pos="-0.012500000017164614 0.011932685721147912 -0.0411372582896498" fullinertia="7.447642417838428e-05 7.592855695401976e-05 2.6098346790795448e-05 1.566236767665718e-14 4.540245116421526e-14 4.460539453694242e-06" />
+                                        </body>
+                                    </body>
+                                </body>
+                                <body name="MR105ZZ-v1_3" pos="0.007249999999999952 -0.03309999956786596 0.046999999999999695" euler="-1.5707963267948966 -6.855627177060307e-15 -1.5707963267948966">
+                                    <geom name="MR105ZZ-v1_3_geom" type="mesh" mesh="MR105ZZ-v1_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                    <inertial mass="0.0017084291193026136" pos="0.001999999999999961 3.0728122705962154e-19 -1.9515846106753272e-13" fullinertia="2.684603859255211e-08 1.540334527187484e-08 1.5403345962971207e-08 1.8110950902812487e-21 -1.188841692475454e-19 1.7216228870842198e-21" />
+                                </body>
+                            </body>
+                        </body>
+                        <body name="MR105ZZ-v1_2" pos="-0.010249999999999515 0.007100000044703609 -0.019999999999999966" euler="-1.5707963267948972 1.5264113149391246e-15 -1.5707963267948952">
+                            <geom name="MR105ZZ-v1_2_geom" type="mesh" mesh="MR105ZZ-v1_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.0017084291193026136" pos="0.001999999999999908 -5.9104243088648145e-18 -1.9515112834572502e-13" fullinertia="2.6846038592558177e-08 1.5403345271877115e-08 1.540334596296642e-08 -4.2268232267537063e-22 -1.1954965385737404e-19 5.790264287871194e-22" />
+                        </body>
+                    </body>
+                    <body name="linky-v2_1" pos="-2.9087843245179103e-16 -1.3322676295501878e-16 -0.04916243500014424" euler="-1.5682902850504483 1.5707963267948917 0">
+                        <geom name="linky-v2_1_geom" type="mesh" mesh="linky-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.03737940896932932" pos="0.003731971810199923 -1.0651202142497596e-14 -0.02460649999999914" fullinertia="1.0996381646102502e-05 1.0962382327787665e-05 5.475672308649182e-07 -2.4219440515068026e-18 3.218619326008034e-21 -1.6178329292557136e-19" />
+                    </body>
+                </body>
+                <body name="MR105ZZ-v1_1" pos="-0.010249999999999837 0.03289956499985519 0.0007500000000000729" euler="1.5707963267948966 3.94430452610506e-31 1.5707963267948966">
+                    <geom name="MR105ZZ-v1_1_geom" type="mesh" mesh="MR105ZZ-v1_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.0017084291193026136" pos="0.00199999999999991 8.427286646433696e-18 -1.9517055545377864e-13" fullinertia="2.6846038592559494e-08 1.5403345271877303e-08 1.540334596296805e-08 -3.4064114411719736e-22 -1.1909766601022023e-19 1.9798742230405253e-22" />
+                </body>
+            </body>
+            <body name="hipforward-v4Mirror_1" pos="0.02824852500705831 0.01695043500014502 -0.014047999999999733" euler="1.3062467774105513e-15 -1.5707963267948921 0">
+                <geom name="hipforward-v4Mirror_1_geom" type="mesh" mesh="hipforward-v4Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                <inertial mass="0.044824750494876775" pos="0.00012740432430608878 0.05458807553144637 0.0010166961006351357" fullinertia="9.40645709550546e-06 1.0790373627989597e-05 1.618899663580775e-05 4.4043590153190773e-07 3.6251846479532274e-08 1.0443778156618758e-07" />
+                <body name="thigh-v2Mirror_1" pos="-0.010249999999999879 0.08021199999999983 -0.0007499999999998996" euler="1.5707963267949019 1.0471975511965965 4.597725365007213e-15">
+                    <joint name="left_hip_pitch" type="hinge" axis="-5.5156356628417805e-15 -3.030263568702562e-15 0.9999999999999791" pos="-1.346125947256079e-08 7.771861213996042e-09 -0.001088435826373848" />
+                    <geom name="thigh-v2Mirror_1_geom" type="mesh" mesh="thigh-v2Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.01416811815342197" pos="-1.3079815008865125e-15 -0.025190189975922168 -0.0059214357426713255" fullinertia="6.146674099725876e-06 6.593711626256882e-07 6.484553152908827e-06 -3.0281427864341237e-19 -1.4500279113405948e-18 -5.5123475878589705e-09" />
+                    <body name="knee-v3Mirror_1" pos="0.00112323961120959 -0.07165850807568898 0.04021200000000013" euler="1.5707963267949012 5.073520091989865e-15 -2.6179938779914953">
+                        <joint name="left_knee_pitch" type="hinge" axis="-1.2182922944019203e-15 -0.9999999999999802 4.557575873531558e-15" pos="-0.010249989518844909 -0.041300435826372495 0.019999434546778126" />
+                        <geom name="knee-v3Mirror_1_geom" type="mesh" mesh="knee-v3Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.11003850611477256" pos="0.004351400469169451 -0.015041765302906513 0.023497969883774405" fullinertia="2.0904399812253117e-05 4.038782990190592e-05 4.790700881599033e-05 2.482830345837011e-06 -5.026961656885114e-07 -1.0673750150697577e-06" />
+                        <body name="servo.MG995-v1Mirror_1" pos="0.048124999999999786 0.028299999999999676 0.03112676038879073" euler="3.141592653589787 -1.047197551196595 1.1003064445364599e-14">
+                            <joint name="left_ankle_pitch" type="hinge" axis="-2.163701883729809e-15 0.9999999999999795 -3.0707388900740568e-15" pos="-0.01025004161479155 0.04430043582637151 4.390520365187698e-07" />
+                            <geom name="servo.MG995-v1Mirror_1_geom" type="mesh" mesh="servo.MG995-v1Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.2522135020839084" pos="-0.0002307601785174266 0.019854363650358902 -4.270371611464286e-15" fullinertia="4.045130740349057e-05 4.382061119065658e-05 6.790190657593516e-05 5.098807217761454e-07 -1.8762063856584455e-17 2.2018834858665272e-17" />
+                            <body name="joiner2-v2Mirror_1" pos="-0.048932624650327376 0.017249999999999797 -0.027000000000000312" euler="-3.141592653589786 -2.2327773722533465e-15 -1.5707963267948948">
+                                <geom name="joiner2-v2Mirror_1_geom" type="mesh" mesh="joiner2-v2Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                <inertial mass="0.1812589671908585" pos="0.0018965791412668442 -0.057042996732092136 -0.04501207986774969" fullinertia="8.291626881989754e-05 8.739006213337805e-05 8.91041376626103e-05 1.318847620859798e-05 -1.6810617402197574e-05 2.3585943616911905e-05" />
+                                <body name="servo.MG995-v1Mirror_2" pos="-0.0029999999999998383 -0.03949999956786641 -0.04700000000000021" euler="-3.885780586187984e-16 -1.2227344030925698e-29 3.141592653589792">
+                                    <geom name="servo.MG995-v1Mirror_2_geom" type="mesh" mesh="servo.MG995-v1Mirror_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                    <inertial mass="0.2522135020839084" pos="-0.00023076017851739568 0.019854363650359256 -4.260318589741609e-15" fullinertia="4.045130740348408e-05 4.3820611190657774e-05 6.790190657592833e-05 5.09880721776398e-07 -1.8453122677297467e-17 2.195008962627403e-17" />
+                                    <body name="mg996_arm_round-v1_2" pos="-0.010249999999999967 0.043700000000000065 -7.105427357601002e-17" euler="-1.5707963267948968 -1.5707963267948915 0">
+                                        <joint name="Revolute-62" type="hinge" axis="-1.3566774239097983e-14 4.127025203060121e-15 -0.9999999999999989" pos="-4.3905203599722796e-07 4.358263724055462e-07 0.0005995834676700556" />
+                                        <geom name="mg996_arm_round-v1_2_geom" type="mesh" mesh="mg996_arm_round-v1_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                        <inertial mass="0.006838616865849774" pos="-5.69553100235023e-14 -2.1552030696477893e-17 0.0009179644213399908" fullinertia="1.8332889463489894e-07 1.8332889306589344e-07 3.4718926728401614e-07 -2.902832355385928e-23 4.920702232482719e-19 -1.981244747296354e-21" />
+                                        <body name="loong_rightfootpad-v2Mirror_1" pos="-0.0399999999999989 -0.012499999999999352 -0.05669999999999927" euler="8.579813241208983e-16 2.7102578323738824e-15 -1.5707963267948968">
+                                            <geom name="loong_rightfootpad-v2Mirror_1_geom" type="mesh" mesh="loong_rightfootpad-v2Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                            <inertial mass="0.058604369572271324" pos="-0.012500000017164534 0.011932685721148015 0.041137258289649925" fullinertia="7.447642417838404e-05 7.592855695401917e-05 2.609834679079544e-05 1.566055172516185e-14 -4.540140473400703e-14 -4.460539453694128e-06" />
+                                        </body>
+                                    </body>
+                                </body>
+                                <body name="MR105ZZ-v1Mirror_3" pos="0.007250000000000121 -0.03309999956786625 -0.04700000000000015" euler="-1.5707963267948966 3.8857805861881524e-16 -1.570796326794898">
+                                    <geom name="MR105ZZ-v1Mirror_3_geom" type="mesh" mesh="MR105ZZ-v1Mirror_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                                    <inertial mass="0.0017084291193026136" pos="0.00199999999999996 -2.413031954284991e-17 1.9516088682373575e-13" fullinertia="2.6846038592558872e-08 1.540334527187839e-08 1.5403345962978096e-08 -1.2224253581948306e-21 1.186246573250528e-19 3.872205398523711e-23" />
+                                </body>
+                            </body>
+                        </body>
+                        <body name="MR105ZZ-v1Mirror_2" pos="-0.010249999999999546 0.0031000000447031885 0.02000000000000016" euler="1.570796326794897 -1.0265194505205658e-15 1.5707963267948966">
+                            <geom name="MR105ZZ-v1Mirror_2_geom" type="mesh" mesh="MR105ZZ-v1Mirror_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.0017084291193026136" pos="0.001999999999999924 6.713587631850418e-19 1.9516896607758384e-13" fullinertia="2.6846038592558382e-08 1.5403345271876734e-08 1.5403345962965367e-08 -1.5534177520057556e-21 1.1953224500480585e-19 1.0943599504076556e-21" />
+                        </body>
+                    </body>
+                    <body name="linky-v2Mirror_1" pos="-3.7747582837255325e-17 -5.773159728050814e-17 0.04931243500014432" euler="1.5707963267948997 -1.5707963267948934 0">
+                        <geom name="linky-v2Mirror_1_geom" type="mesh" mesh="linky-v2Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.03737940896932932" pos="0.0037319718102000643 -1.0403136685432912e-14 0.024606499999999157" fullinertia="1.0996381646102604e-05 1.0962382327787777e-05 5.475672308648721e-07 -2.4027013201629865e-18 1.8480392965577138e-19 5.251604272976662e-19" />
+                    </body>
+                </body>
+                <body name="MR105ZZ-v1Mirror_1" pos="-0.010249999999999933 0.03689956499985543 -0.0007499999999999885" euler="-1.5707963267948966 -6.508102468073349e-30 -1.5707963267948966">
+                    <geom name="MR105ZZ-v1Mirror_1_geom" type="mesh" mesh="MR105ZZ-v1Mirror_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.0017084291193026136" pos="0.001999999999999926 6.005612672192692e-18 1.9516144172400592e-13" fullinertia="2.6846038592559692e-08 1.540334527187651e-08 1.5403345962969056e-08 6.877625352512453e-23 1.1897533223960727e-19 -3.439363779614666e-22" />
+                </body>
+            </body>
+        </body>
+    </worldbody>
+</mujoco>

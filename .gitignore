@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.log
+*.jsonl
+events.out.tfevents.*
+optimized_build/
+optimized_binaries/
+build/
+JUGGERNAUT-v7-joystick-finetune/logs/
+JUGGERNAUT-v7/logs/*
+!JUGGERNAUT-v7/logs/juggernaut_v7_realistic/
+JUGGERNAUT-v7/logs/juggernaut_v7_realistic/*
+!JUGGERNAUT-v7/logs/juggernaut_v7_realistic/20261027_140516_559717/

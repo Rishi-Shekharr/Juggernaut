@@ -1,0 +1,353 @@
+training:
+  stage: realistic
+  pipeline_version: juggernaut_v7_external_arms_history_v4
+  reward_version: v7_timing_effort_ramp_v2
+  experiment_name: juggernaut_v7_realistic
+  num_envs: 2048
+  max_iterations: 2600
+  console_interval: 1
+  actor_observations: 230
+  critic_observations: 53
+  num_actions: 8
+  selection_start_iteration: 2000
+  curriculum:
+    enabled: true
+    nominal_iterations: 100
+    ramp_iterations: 1100
+    nominal_replay_probability: 0.25
+training_contract:
+  num_actions: 8
+  action_joints:
+  - left_hip_pitch
+  - left_knee_pitch
+  - left_ankle_pitch
+  - Revolute-62
+  - right_hip_pitch
+  - right_knee_pitch
+  - right_ankle_pitch
+  - right_ankle_roll
+  actor_observations: 230
+  critic_observations: 53
+  actor_fields:
+  - gyro_xyz
+  - projected_gravity_xyz
+  - commands_xy
+  - measured_leg_joint_positions
+  - command_estimated_arm_joint_positions
+  - command_history_joint_velocities
+  - previous_leg_actions
+  - external_arm_command_positions
+  - gait_sin_cos
+  critic_fields:
+  - clean_actor_with_true_joint_state
+  - true_linear_velocity_xyz
+  - true_foot_contacts
+  - reset_lateral_position
+  - true_heading_error
+  frame_observations: 46
+  history_frames: 5
+  history_order: oldest_to_newest
+performance:
+  backend: warp
+  genesis_performance_mode: true
+  torch_num_threads: 4
+  allow_tf32: true
+env:
+  xml_path: JUGGERNAUT-v7.xml
+  control_dt: 0.02
+  substeps: 10
+  episode_length_s: 30.0
+  resample_commands_s: 5.0
+  self_collision: true
+  adjacent_collision: true
+  neutral_collision: true
+  max_collision_pairs: 256
+  max_contacts: 256
+  friction_cone: pyramidal
+  init_base_pos:
+  - -0.0038844905366649763
+  - 2.870826517110091e-06
+  - 0.17190856094796
+  init_base_quat:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  disable_state_projection: true
+  joint_velocity_observation: command_history
+  spawn_height_margin: 0.003
+  reset_dof_noise: 0.02
+  clip_actions: 1.0
+  external_arms:
+    control: external
+    joint_names:
+    - left_shoulder
+    - left_mandible
+    - right_shoulder
+    - right_mandible
+    reset_pose_deg:
+      left_shoulder: -60.0
+      left_mandible: 45.0
+      right_shoulder: -60.0
+      right_mandible: 45.0
+    reset_ranges_deg:
+      left_shoulder:
+      - -60.0
+      - -60.0
+      left_mandible:
+      - 45.0
+      - 45.0
+      right_shoulder:
+      - -60.0
+      - -60.0
+      right_mandible:
+      - 45.0
+      - 45.0
+    pose_ranges_deg:
+      left_shoulder:
+      - -65.0
+      - -55.0
+      left_mandible:
+      - 35.0
+      - 55.0
+      right_shoulder:
+      - -65.0
+      - -55.0
+      right_mandible:
+      - 35.0
+      - 55.0
+    reset_hold_s:
+    - 1.5
+    - 2.5
+    hold_s:
+    - 5.0
+    - 8.0
+    settling_margin_s: 0.5
+    curriculum:
+      warmup_iterations: 50
+      ramp_iterations: 300
+      initial_alpha: 1.0
+      final_alpha: 1.0
+    mode: moving
+    command_speed_rad_s: 0.35
+    safe_envelope_deg:
+      left_shoulder:
+      - -65.0
+      - -55.0
+      left_mandible:
+      - 35.0
+      - 55.0
+      right_shoulder:
+      - -65.0
+      - -55.0
+      right_mandible:
+      - 35.0
+      - 55.0
+    obstruction_force_n: 1.0
+    obstruction_duration_s: 0.1
+  action_delay_steps: 1
+  nominal_leg_actuator:
+    speed_rad_s: 6.0
+    torque_limit_nm: 0.94
+  servo:
+    mode: torque_speed
+    target_filter_tau_s: 0.0
+    target_slew_speed_rad_s: 6.0
+    hard_velocity_limit_rad_s: 6.0
+    arm_target_slew_speed_rad_s: 10.0
+    arm_hard_velocity_limit_rad_s: 10.0
+    mandible_target_slew_speed_rad_s: 10.0
+    mandible_hard_velocity_limit_rad_s: 10.0
+    deadband_rad: 0.00523598775598
+    backlash_rad: 0.0
+  servo_safety:
+    stall_torque_fraction: 0.7
+    stall_speed_rad_s: 0.2
+    max_stall_duration_s: 0.5
+  joint_observation: mixed
+  joint_sensor:
+    delay_steps: 0
+    position_noise_std_rad: 0.0
+    position_noise_uniform_rad: 0.0043633231299858
+    quantization_rad: 0.001
+    measured_joints:
+    - left_hip_pitch
+    - left_knee_pitch
+    - left_ankle_pitch
+    - Revolute-62
+    - right_hip_pitch
+    - right_knee_pitch
+    - right_ankle_pitch
+    - right_ankle_roll
+    command_estimated_joints:
+    - left_shoulder
+    - left_mandible
+    - right_shoulder
+    - right_mandible
+  heading_feedback: false
+  critic_lateral_position: true
+  command_reference_frame: reset_heading
+  imu:
+    enabled: true
+    delay_steps: 1
+    gyro_noise_std_rad_s: 0.02
+    gyro_bias_std_rad_s: 0.005
+    gyro_bias_walk_std_rad_s_sqrt_s: 0.0005
+    accel_noise_std_m_s2: 0.08
+    accel_bias_std_m_s2: 0.05
+    accel_full_scale_m_s2: 39.2266
+    accel_quantization_m_s2: 0.0196133
+    tilt_filter_tau_s: 0.5
+    accel_gate_fraction: 0.2
+  friction:
+    floor: 0.4
+    foot: 0.6
+  ground_support_only: true
+  domain_randomization:
+    enabled: true
+    kp_scale:
+    - 0.8
+    - 1.2
+    kd_scale:
+    - 0.7
+    - 1.3
+    torque_scale:
+    - 0.75
+    - 1.0
+    speed_scale:
+    - 0.75
+    - 1.0
+    deadband_rad:
+    - 0.00523598775598
+    - 0.0174532925199433
+    action_delay_steps:
+    - 1
+    - 3
+    backlash_rad:
+    - 0.0087266462599716
+    - 0.0261799387799149
+    friction_scale:
+    - 0.67
+    - 1.33
+    mass_scale:
+    - 0.9
+    - 1.1
+  observation_noise:
+    ang_vel: 0.0
+    projected_gravity: 0.0
+    dof_pos: 0.002
+    dof_vel: 0.0
+  pushes:
+    enabled: false
+    interval_s: 4.0
+    velocity_delta_m_s: 0.05
+  base_link: chas-v7_1
+  foot_links:
+  - loong_rightfootpad-v2Mirror_1
+  - loong_rightfootpad-v3_1
+  toe_collision_geoms:
+  - left_sole_collision
+  - right_sole_collision
+  termination_links:
+  - chas-v7_1
+  - thigh-v2_1
+  - thigh-v2Mirror_1
+  penalized_links:
+  - knee-v3Mirror_1
+  - knee-v3_1
+  terminate_tilt_rad: 0.8
+  terminate_base_height: 0.0795
+  contact_force_threshold: 1.0
+  observation_history_frames: 5
+  thermal_proxy:
+    leg_rms_budget_nm: 0.392266
+    note: Provisional 4 kgf cm estimate for <=20 minute runs. Later stage gates compare
+      actual substep RMS over their assessment rollouts; this is not a temperature
+      model or a continuous-duty certification.
+commands:
+  lin_vel_x:
+  - 0.1
+  - 0.15
+  lin_vel_y:
+  - 0.0
+  - 0.0
+  ang_vel:
+  - 0.0
+  - 0.0
+gait:
+  period_s: 0.6
+  stance_ratio: 0.6
+  swing_height: 0.025
+  minimum_swing_clearance_m: 0.015
+  feet_flat_stance_only: true
+obs_scales:
+  lin_vel: 5.0
+  ang_vel: 0.25
+  dof_pos: 1.0
+  dof_vel: 0.05
+  commands:
+  - 5.0
+  - 5.0
+rewards:
+  tracking_sigma_lin: 0.015
+  tracking_sigma_ang: 0.25
+  base_height_target: 0.1655
+  bounded_course_errors: true
+  heading_tolerance_rad: 0.2
+  lateral_velocity_tolerance_m_s: 0.05
+  lateral_position_tolerance_m: 0.05
+  termination_is_event: true
+  scales:
+    tracking_lin_vel: 1.5
+    tracking_ang_vel: 0.5
+    lin_vel_y: -0.4
+    heading: -0.5
+    lateral_drift: -1.0
+    contact_match: 1.0
+    lin_vel_z: -2.0
+    ang_vel_xy: -0.05
+    orientation: -2.0
+    base_height: -100.0
+    action_rate: -0.01
+    dof_acc: -2.5e-06
+    torques: -0.05
+    ankle_roll_deviation: -0.2
+    feet_flat: -4.0
+    feet_swing_height: -600.0
+    feet_swing_peak: -0.6
+    feet_swing_symmetry: -0.8
+    feet_swing_time_symmetry: -0.2
+    feet_swing_clearance: -0.5
+    feet_slip: -2.0
+    unwanted_contacts: -0.5
+    termination: -5.0
+ppo:
+  num_steps_per_env: 24
+  save_interval: 100
+  seed: 1
+  min_noise_std: 0.08
+  algorithm:
+    clip_param: 0.2
+    desired_kl: 0.01
+    entropy_coef: 0.005
+    gamma: 0.99
+    lam: 0.95
+    learning_rate: 0.0001
+    max_grad_norm: 1.0
+    num_learning_epochs: 5
+    num_mini_batches: 4
+    schedule: fixed
+    use_clipped_value_loss: true
+    value_loss_coef: 1.0
+  policy:
+    activation: elu
+    actor_hidden_dims:
+    - 256
+    - 128
+    - 64
+    critic_hidden_dims:
+    - 256
+    - 128
+    - 64
+    init_noise_std: 0.18
+  max_noise_std: 0.25
